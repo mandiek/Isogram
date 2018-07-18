@@ -14,3 +14,28 @@ function isIsogram(str) {
 
 isIsogram("background");
 isIsogram("baackground");
+
+
+varth = ['', 'thousand', 'million', 'billion', 'trillion'];
+
+var dg = ['zero', 'one', 'two', 'three', 'four',
+    'five', 'six', 'seven', 'eight', 'nine'
+];
+
+vartn = ['ten', 'eleven', 'twelve', 'thirteen',
+    'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'
+];
+
+vartw = ['twenty', 'thirty', 'forty', 'fifty',
+    'sixty', 'seventy', 'eighty', 'ninety'
+];
+
+
+function toWords(s) {
+    s = s.toString();
+
+    s = s.replace(/[\, ]/g, '');
+
+    if (s != parseFloat(s)) return 'not a number';
+
+    var x = s.indexOf('.');
